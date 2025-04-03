@@ -1,0 +1,32 @@
+numbers = []
+number = ""
+sum = 0
+average = 0
+largest = 0
+
+while number != 0:
+    number = int(input("Enter number: "));
+ 
+    if number != 0:
+        numbers.append(number)
+        sum += number
+        average = (sum/len(numbers))
+
+largest = max(numbers)
+smallest = largest
+sorted_list = sorted(numbers)
+
+for number in numbers:
+    
+    if number > 0 and number < smallest:
+        smallest = number
+
+
+print(f'This is the sum: {sum}')
+print(f'This is the average: {average}')
+print(f'This is the largest: {largest}')
+print(f'The smallest positive number is: {smallest}')
+
+print("The sorted list is:")
+for number in sorted_list:
+    print(number)
